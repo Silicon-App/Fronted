@@ -1,0 +1,525 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<header>
+    <a href="Overview"><img src="/Image/solid.svg" alt="siliconloggo"> </a>
+    <nav class="options">
+
+        <AuthorizeView>
+            <Authorized>
+                <NavLink href="Overview">Overview</NavLink>
+                <NavLink href="Features">Features</NavLink>
+                <NavLink href="Contact">Contact</NavLink>
+                <NavLink href="Courses">Coureses</NavLink>
+            </Authorized>
+
+            <NotAuthorized>
+                <NavLink href="Overview">Overview</NavLink>
+                <NavLink href="Features">Features</NavLink>
+                <NavLink href="Contact">Contact</NavLink>
+            </NotAuthorized>
+        </AuthorizeView>
+    </nav>
+
+    <div class="Switchbutton">
+        <p>Light</p>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <p>Dark</p>
+    </div>
+
+    <div class="signButtons">
+
+        <AuthorizeView>
+            <Authorized>
+                <nav class="signUp">
+                    <a href="Account">
+                        <i class="fa-solid fa-user-plus"></i>My account
+                    </a>
+                </nav>
+            </Authorized>
+
+            <NotAuthorized>
+                <nav class="signIn">
+                    <a href="SignIn">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>Sign in
+                    </a>
+                </nav>
+
+                <nav class="signUp">
+                    <a href="SignUp">
+                        <i class="fa-solid fa-user-plus"></i>Sign up
+                    </a>
+                </nav>
+            </NotAuthorized>
+        </AuthorizeView>
+    </div>
+</header>
+
+<section>
+    <div class="TaskManagement">
+        <div class="Managementtext">
+            <h2>
+                <strong>
+                    Task Management<br>
+                    Assistant You <br>
+                    Gonna Love
+                </strong>
+
+            </h2>
+
+            <p class="Managementfirsttext">
+                We offer you a new generation of task management system.<br>
+                Plan, manage & track all your tasks in one flexible tool.
+            </p>
+
+            <nav class="GetstartedButton">
+
+                <a href="#">Ger started for free</a>
+
+            </nav>
+
+            <p class="Managementsecondtext">
+                <strong>
+
+                    Largest companies use our tool to work efficiently
+
+                </strong>
+            </p>
+
+            <div class="CopmanyLogo">
+
+                <img src="/Image/logos.svg" alt="Companylogo">
+
+            </div>
+
+        </div>
+
+        <div class="dashboard">
+
+            <img src="/Image/Dashboard.svg" alt="Dashboard">
+
+
+        </div>
+
+    </div>
+
+    <div class="Tools">
+
+    <div class="OurTool">
+
+        <h2>
+            <strong>
+
+                What Do You Get with Our Tool?
+
+            </strong>
+        </h2>
+
+        <p class="undertexttool">
+            Make sure all your tasks are organized so you can set the priorities and focus<br>
+        <p class="undertext">on important.</p>
+         </p>
+
+    </div>
+
+        <div class="Toolsupside">
+
+            <a href="#">
+                <i class="fa-regular fa-comments"></i>
+
+                <h3>
+                    <strong>
+                        Comments on Tasks
+                    </strong>
+                </h3>
+
+                <p>
+                    Id mollis consectetur congue egestas egestas<br>
+                    suspendisse blandit justo.
+                </p>
+
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h3>
+                    <strong>
+                        Tasks Analytics
+                    </strong>
+                </h3>
+
+                <p>
+                    Non imperdiet facilisis nulla tellus Morbi<br>
+                    scelerisque eget adipiscing vulputate.
+                </p>
+
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-user-group"></i>
+
+                <h3>
+                    <strong>
+                        Multiple Assignees
+                    </strong>
+                </h3>
+
+                <p>
+                    A elementum, imperdiet enim, pretium etiam<br>
+                    facilisi in aenean quam mauris.
+                </p>
+            </a>
+
+        </div>
+        <div class="Toolsdown">
+
+            <a href="#">
+                <i class="fa-solid fa-bell"></i>
+
+                <h3>
+                    <strong>
+                        Notifications
+                    </strong>
+                </h3>
+
+                <p>
+                    Diam, suspendisse velit cras ac. Lobortis diam<br>
+                    volutpat, eget pellentesque viverra.
+                </p>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-list-check"></i>
+
+                <h3>
+                    <strong>
+                        Sections & Subtasks
+                    </strong>
+                </h3>
+
+                <p>
+                    Mi feugiat hac id in. Sit elit placerat lacus nibh<br>
+                    lorem ridiculus lectus.
+                </p>
+            </a>
+
+
+            <a href="#">
+                <i class="fa-solid fa-shield"></i>
+
+                <h3>
+                    <strong>
+                        Data Security
+                    </strong>
+                </h3>
+
+                <p>
+                    Aliquam malesuada neque eget elit nulla<br>
+                    vestibulum nunc cras.
+                </p>
+            </a>
+
+        </div>
+
+
+    </div>
+    
+    <div class="switchbetween">
+
+        <div class="darkmode">
+
+            <h2>
+                <strong>
+                    Switch Between
+                </strong>
+            </h2>
+
+
+
+        </div>
+
+        <div class="lightmode">
+
+            <h2>
+                <strong>
+
+                    Light & Dark Mode
+                </strong>
+            </h2>
+
+
+        </div>
+
+        <img src="/Image/darklightmode.svg">
+
+
+
+    </div>
+
+    <div class="Managework">
+
+
+        <img src="/Image/ManageYourwork.svg">
+
+
+        <div class="checkBox">
+
+            <h3>
+                <strong>
+                    Manage Your Work
+                </strong>
+            </h3>
+
+            <div class="checktext">
+                <p>
+                    <i class="fa-solid fa-check"></i>
+                    Powerful project management
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-check"></i>
+                    Transparent work management
+                </p>
+                <p>
+                    <i class="fa-solid fa-check"></i>
+                    Manage work & focus on the most important tasks
+                </p>
+                <p>
+                    <i class="fa-solid fa-check"></i>
+                    Track your progress with interactive charts
+                </p>
+                <p>
+                    <i class="fa-solid fa-check"></i>
+                    Easiest way to track time spent on tasks
+                </p>
+            </div>
+            <a href="#">
+                Learn more
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+
+
+    </div>
+
+    <div class="downloadourapp">
+
+        <div class="downloadmiddlebox">
+
+            <img class="iphone" src="/Image/iphone.svg">
+
+
+
+            <div class="downloaddevices">
+
+                <h2>
+                    <strong>
+                        Download Our App<br>
+                        for Any Devices:
+                    </strong>
+                </h2>
+
+                <div class="Appstore">
+                    <p>App Store</p>
+                    <img src="/Image/stars.svg">
+
+                    <div class="editorchoice">
+                        <div>
+                            <h6>
+                                Editor's Choice
+                            </h6>
+                            <p>
+                                rating 4.7, 187K+ reviews
+                            </p>
+                        </div>
+                        <img src="/Image/appstore.svg">
+                    </div>
+                </div>
+
+                <div class="googleplay">
+                    <p>Google Play</p>
+                    <img src="/Image/stars.svg">
+
+                    <div class="editorchoice">
+                        <div>
+                            <h6>
+                                App of the Day
+                            </h6>
+                            <p>
+                                rating 4.8, 30K+ reviews
+                            </p>
+                        </div>
+                        <img src="/Image/googleplay.svg">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="workTools">
+    <div class="workToolsText">
+        <h2><strong>Integrate Top Work Tools</strong></h2>
+        <p class="workToolsUpperText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus</p>
+        <p class="workToolsUnderText">facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+    </div>
+
+    <div class="workToolsBoxes">
+
+        <div class="workToolsUp">
+            <a href="">
+                <img src="/Image/Google.svg" alt="Logo">
+                <p>
+                    Lorem magnis pretium sed <br>
+                    curabitur nunc facilisi nunc cursus <br>
+                    sagittis.
+                </p>
+            </a>
+
+            <a href="">
+                <img src="/Image/Zoom.svg" alt="Logo">
+                <p>
+                    In eget a mauris quis. Tortor dui <br>
+                    tempus quis integer est sit <br>
+                    natoque placerat dolor.
+                </p>
+
+            </a>
+
+            <a href="">
+                <img src="/Image/slack.svg" alt="Logo">
+                <p>
+                    Id mollis consectetur congue <br>
+                    egestas egestas suspendisse <br>
+                    blandit justo.
+                </p>
+            </a>
+
+            <a href="">
+                <img src="/Image/gmail.svg" alt="Logo">
+                <p>
+                    Rutrum interdum tortor, sed at <br>
+                    nulla. A cursus bibendum elit purus <br>
+                    cras praesent.
+                </p>
+            </a>
+        </div>
+
+            <div class="workToolsDown">
+                <a href="">
+                    <img src="/Image/Trello.svg" alt="Logo">
+                    <p>
+                        Congue pellentesque amet, viverra <br>
+                        curabitur quam diam scelerisque <br>
+                        fermentum urna.
+                    </p>
+                </a>
+
+                <a href="">
+                    <img src="/Image/mailchimp.svg" alt="Logo">
+                    <p>
+                        A elementum, imperdiet enim,<br>
+                        pretium etiam facilisi in aenean <br>
+                        quam mauris.
+                    </p>
+                </a>
+
+                <a href="">
+                    <img src="/Image/Dropbox.svg" alt="Logo">
+                    <p>
+                        Ut in turpis consequat odio diam <br>
+                        lectus elementum. Est faucibus <br>
+                        blandit platea.
+                    </p>
+                </a>
+
+                <a href="">
+                    <img src="/Image/Evernote.svg" alt="Logo">
+                    <p>
+                        Faucibus cursus maecenas lorem <br>
+                        cursus nibh. Sociis sit risus id. Sit <br>
+                        facilisis dolor arcu.
+                    </p>
+                </a>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <div class="subscribe">
+        <div class="subscribeHeader">
+            <h1>
+                <strong>Don't Want to Miss Anything?</strong>
+                <img src="/Image/arrow.svg">
+            </h1>
+        </div>
+
+        <div class="newsLetterCheckBoxes">
+            <div class="subTitle">
+                <h5>
+                    <strong>
+                        Sign up for <br>
+                        Newsletters
+                    </strong>
+                </h5>
+            </div>
+
+            <div class="checkBoxes">
+                <form class="checkBoxesUp" action="#">
+                    <input type="checkbox" value="Daily Newsletter">
+                    <label for="Daily Newsletter"> Daily Newsletter</label>
+
+                    <input type="checkbox" value="Advertising Updates">
+                    <label for="Advertising Updates"> Advertising Updates</label>
+
+                    <input type="checkbox" value="Week in Review">
+                    <label for="Week in Review"> Week in Review</label>
+
+                </form>
+
+                <form class="checkBoxesDown" action="#">
+                    <input type="checkbox" value="Event Updates">
+                    <label for="Event Updates"> Event Updates</label>
+
+                    <input type="checkbox" value="Startups Weekly">
+                    <label for="Startups Weekly"> Startups Weekly</label>
+
+                    <input type="checkbox" value="Podcasts">
+                    <label for="Podcasts"> Podcasts</label>
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="subInput">
+            <div class="subUp">
+                <input type!="Your Email" placeholder="Your Email">
+
+                <a href="#">
+                    Subscribe*
+                </a>
+            </div>
+
+            <p>
+                Yes, I agree to the <a href="#">terms</a> and <a href="#">privacy policy</a>
+            </p>
+        </div>
+
+
+    </div>
+</section>

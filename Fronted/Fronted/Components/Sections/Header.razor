@@ -1,0 +1,62 @@
+﻿<header>
+	<a href="Overview"><img src="/Image/solid.svg" alt="siliconloggo"> </a>
+	<nav class="options">
+
+        <AuthorizeView>
+            <Authorized>
+                <NavLink href="Overview">Overview</NavLink>
+                <NavLink href="Features">Features</NavLink>
+                <NavLink href="Contact">Contact</NavLink>
+                <NavLink href="Courses">Coureses</NavLink>
+            </Authorized>
+
+            <NotAuthorized>
+                <NavLink href="Overview">Overview</NavLink>
+                <NavLink href="Features">Features</NavLink>
+                <NavLink href="Contact">Contact</NavLink>
+            </NotAuthorized>
+        </AuthorizeView>
+    </nav>
+
+    <div class="Switchbutton">
+        <p>Light</p>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <p>Dark</p>
+    </div>
+
+    <div class="signButtons">
+
+        <AuthorizeView>
+            <Authorized>
+                <nav class="signIn">
+                    <a>
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>Sign Out
+                    </a>
+                </nav>
+
+                <nav class="signUp">
+                    <a href="Account">
+                        <i class="fa-solid fa-user-plus"></i>My account
+                    </a>
+                </nav>
+            </Authorized>
+
+            <NotAuthorized>
+                <nav class="signIn">
+                    <a href="SignIn">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>Sign in
+                    </a>
+                </nav>
+
+                <nav class="signUp">
+                    <a href="SignUp">
+                        <i class="fa-solid fa-user-plus"></i>Sign up
+                    </a>
+                </nav>
+            </NotAuthorized>
+        </AuthorizeView>
+    </div>
+</header>

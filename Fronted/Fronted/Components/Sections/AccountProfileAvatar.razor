@@ -1,0 +1,62 @@
+﻿@attribute [StreamRendering]
+
+<header>
+    <a href="Overview"><img src="/Image/solid.svg" alt="siliconloggo"> </a>
+</header>
+
+@if(user == null)
+{
+    <p><em>Loading.....</em></p>
+}
+else
+{
+    
+<section class="profilePicture">
+
+
+    <div class="profile-pic">
+        <label class="-label" for="file">
+            <span class="glyphicon glyphicon-camera"></span>
+            <span>Change Image</span>
+        </label>
+        <input id="file" type="file" onchange="loadFile(event)" />
+        <img src="/Image/noProfilePictureIcon.svg" alt="">
+
+
+
+    </div>
+    <div class="profileButton">
+
+        <p><strong>@user.FirstName @user.LastName</strong></p>
+        <p>@user.Email</p>
+
+
+
+        <nav class="accountDetailsButton">
+            <a href="#"><i class="fa-solid fa-gear"></i>Account Details</a>
+        </nav>
+        <nav class="signOutButton">
+            <a href="SignOut"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sign Out</a>
+        </nav>
+
+    </div>
+</section>
+
+
+}
+
+
+
+@code {
+
+    private ApplicationUser user = default!;
+
+    [CascadingParameter]
+    private HttpContext HttpContext { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        user = await UserManager.GetUserAsync(HttpContext.User) ?? null!;
+
+    }
+}

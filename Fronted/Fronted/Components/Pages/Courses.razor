@@ -1,0 +1,220 @@
+﻿@page "/courses"
+@attribute [StreamRendering]
+@attribute [Authorize]
+
+<PageTitle>Courses</PageTitle>
+
+<div class="courses">
+    <div class="coursesHeader">
+        <div class="CoursesText">
+            <h1><strong>Courses</strong></h1>
+        </div>
+
+        <div class="coursesInput">
+            <div class="dropdown">
+                <button>Choose Category &#9660;</button>
+                <div class="dropdown-content">
+                    <a href="#">Home</a>
+                    <a href="#">Courses</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+
+            <div class="searchBox">
+                <input type!="Courses" placeholder="Search Courses">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@if (courses == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @foreach (var course in courses)
+    {
+        <div class="coursesAlternative">
+    <div class="coursesBoxesUp">
+        <a href="#">
+            <img src="/Image/RobertFox.svg">
+            <div class="underPictureText">
+                <h6>@course.Title</h6>
+                <p>By @course.Author</p>
+                <p><strong>@course.Price</strong></p>
+                <hr>
+                <div class="CoursesUnderText">
+                    <p><i class="fa-regular fa-clock"></i>@course.Hours</p>
+                    <p><i class="fa-regular fa-thumbs-up"></i>@course.LikesInProcent @course.LikesInNumbers</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <img src="/Image/JennyWilson.svg">
+            <div class="underPictureText">
+                <h6>@course.Title</h6>
+                <p>By @course.Author</p>
+                <p><strong>@course.Price</strong></p>
+                <hr>
+                <div class="CoursesUnderText">
+                    <p><i class="fa-regular fa-clock"></i>@course.Hours</p>
+                    <p><i class="fa-regular fa-thumbs-up"></i>@course.LikesInProcent @course.LikesInNumbers</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <img src="/Image/AlbertFlores.svg">
+            <div class="underPictureText">
+                <h6>@course.Title</h6>
+                <p>By @course.Author</p>
+                <p><strong>@course.Price</strong></p>
+                <hr>
+                <div class="CoursesUnderText">
+                    <p><i class="fa-regular fa-clock"></i>@course.Hours</p>
+                    <p><i class="fa-regular fa-thumbs-up"></i>@course.LikesInProcent @course.LikesInNumbers</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="coursesBoxesMiddle">
+        <a href="#">
+            <img src="/Image/MarvinMcKinney.svg" alt="">
+            <div class="underPictureText">
+                <h6>@course.Title</h6>
+                <p>By @course.Author</p>
+                <p><strong>@course.Price</strong></p>
+                <hr>
+                <div class="CoursesUnderText">
+                    <p><i class="fa-regular fa-clock"></i>@course.Hours</p>
+                    <p><i class="fa-regular fa-thumbs-up"></i>@course.LikesInProcent @course.LikesInNumbers</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <img src="/Image/EstherHoward.svg" alt="">
+            <div class="underPictureText">
+                <h6>@course.Title</h6>
+                <p>By @course.Author</p>
+                <p><strong>@course.Price</strong></p>
+                <hr>
+                <div class="CoursesUnderText">
+                    <p><i class="fa-regular fa-clock"></i>@course.Hours</p>
+                    <p><i class="fa-regular fa-thumbs-up"></i>@course.LikesInProcent @course.LikesInNumbers</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <img src="/Image/RobertFoxSecondCourse.svg" alt="">
+            <div class="underPictureText">
+                <h6>@course.Title</h6>
+                <p>By @course.Author</p>
+                <p><strong>@course.Price</strong></p>
+                <hr>
+                <div class="CoursesUnderText">
+                    <p><i class="fa-regular fa-clock"></i>@course.Hours</p>
+                    <p><i class="fa-regular fa-thumbs-up"></i>@course.LikesInProcent @course.LikesInNumbers</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="coursesBoxesDown">
+        <a href="#">
+            <img src="/Image/RalphEdwards.svg" alt="">
+            <div class="underPictureText">
+                <h6>@course.Title</h6>
+                <p>By @course.Author</p>
+                <p><strong>@course.Price</strong></p>
+                <hr>
+                <div class="CoursesUnderText">
+                    <p><i class="fa-regular fa-clock"></i>@course.Hours</p>
+                    <p><i class="fa-regular fa-thumbs-up"></i>@course.LikesInProcent @course.LikesInNumbers</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <img src="/Image/AlbertFloresSecondCourse.svg" alt="">
+            <div class="underPictureText">
+                <h6>@course.Title</h6>
+                <p>By @course.Author</p>
+                <p><strong>@course.Price</strong></p>
+                <hr>
+                <div class="CoursesUnderText">
+                    <p><i class="fa-regular fa-clock"></i>@course.Hours</p>
+                    <p><i class="fa-regular fa-thumbs-up"></i>@course.LikesInProcent @course.LikesInNumbers</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <img src="/Image/JennyWilsonSecondCourse.svg" alt="">
+            <div class="underPictureText">
+                <h6>@course.Title</h6>
+                <p>By @course.Author</p>
+                <p><strong>@course.Price</strong></p>
+                <hr>
+                <div class="CoursesUnderText">
+                    <p><i class="fa-regular fa-clock"></i>@course.Hours</p>
+                    <p><i class="fa-regular fa-thumbs-up"></i>@course.LikesInProcent @course.LikesInNumbers</p>
+                </div>
+            </div>
+        </a>
+    </div>
+        </div>
+
+        <div class="workWithUs">
+            <div class="WWUText">
+            <p>Ready to get started?</p>
+            <h1><strong>Take Your <span>Skills</span> to the <br>Next Level</strong></h1>
+
+             <a href="#">Work with us</a>
+        </div>
+
+        <img src="/Image/illustration.svg" alt="">
+
+    </div>
+    
+    }
+}
+
+
+
+@code {
+
+
+    private CourseModel[]? courses;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            courses = await Http.GetFromJsonAsync<CourseModel[]>("courseprovider-win23jsbackend-albulenashabani.azurewebsites.net/api/courses");
+
+        }
+        catch (Exception ex) { }
+
+    }
+
+    private class CourseModel
+    {
+        public int Id { get; set; } 
+        public bool IsBestSeller { get; set; }
+        public string Title { get; set; }  = null!;
+        public string Author { get; set; } = null!;
+        public string Price { get; set; } = null!;
+        public string? DiscountPrice { get; set; }
+        public string Hours { get; set; } = null!;
+        public string LikesInProcent { get; set; } = null!;
+        public string LikesInNumbers { get; set; } = null!;
+
+    }
+
+
+}
+
