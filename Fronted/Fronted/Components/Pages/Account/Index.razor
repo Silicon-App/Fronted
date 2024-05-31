@@ -138,11 +138,12 @@
             var setPhoneResult = await UserManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
             if (!setPhoneResult.Succeeded)
             {
-               
+
             }
         }
 
         await SignInManager.RefreshSignInAsync(user);
+
     }
 
     private sealed class InputModel

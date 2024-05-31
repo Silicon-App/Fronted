@@ -36,7 +36,7 @@ else
             <a href="#"><i class="fa-solid fa-gear"></i>Account Details</a>
         </nav>
         <nav class="signOutButton">
-            <a href="SignOut"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sign Out</a>
+                <NavLink href="/" @onclick="HandleSignOut"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sign Out</NavLink>
         </nav>
 
     </div>
@@ -59,4 +59,16 @@ else
         user = await UserManager.GetUserAsync(HttpContext.User) ?? null!;
 
     }
-}
+
+
+    public async Task HandleSignOut()
+    
+        {
+            await SignInManager.SignOutAsync();
+
+           
+            
+        }
+    }
+
+
