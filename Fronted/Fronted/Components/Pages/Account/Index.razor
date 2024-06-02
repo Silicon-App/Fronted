@@ -112,7 +112,8 @@
 
 </div>
 @code {
-    private ApplicationUser user = default!;
+    [CascadingParameter]
+    private ApplicationUser user { get; set; } = default!;
     private string? username;
     private string? phoneNumber;
 
@@ -138,7 +139,7 @@
             var setPhoneResult = await UserManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
             if (!setPhoneResult.Succeeded)
             {
-
+                
             }
         }
 

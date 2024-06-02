@@ -36,7 +36,7 @@ else
             <a href="#"><i class="fa-solid fa-gear"></i>Account Details</a>
         </nav>
         <nav class="signOutButton">
-                <NavLink href="/" @onclick="HandleSignOut"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sign Out</NavLink>
+                <NavLink @onclick="HandleSignOut"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sign Out</NavLink>
         </nav>
 
     </div>
@@ -49,7 +49,9 @@ else
 
 @code {
 
-    private ApplicationUser user = default!;
+    [CascadingParameter]
+    private ApplicationUser user  { get; set; } = default!;
+
 
     [CascadingParameter]
     private HttpContext HttpContext { get; set; } = default!;
